@@ -112,7 +112,7 @@ button:disabled {
 }
 
 img {
-    width: 10vw;
+    width: 5vw;
 }
 
 @media screen and (max-width: 1250px) {
