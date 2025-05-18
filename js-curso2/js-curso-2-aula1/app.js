@@ -21,11 +21,11 @@ function exibirMensagemInicial() {
 }
 
 function verificarChute() {
-    tentativas++;
     let chute = document.querySelector('input').value;
     exibirTentativas();
 
-    if (chute <= numMaximo) {
+    if (chute <= numMaximo && chute != '') {
+        tentativas++;
         if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Você Acertou!');
         exibirTextoNaTela('p', 'Você descobriu o número secreto com ' + tentativas + ' tentativa(s).');
