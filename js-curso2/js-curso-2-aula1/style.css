@@ -125,12 +125,26 @@ p#numeroDeTentativas {
 
     h1 {
         font-size: 50px;
+        text-align: center;
+        line-height: 1em;
+    }
+
+    .container__input {
+        width: 90%;
+
     }
 
     .container__botao {
         font-size: 16px;
+        margin: 5px;
+        width: 90%;
     }
 
+    .container__botoes {
+        flex-direction: column;
+        width: 100%;
+        margin: 5px;
+    }
 
     .texto__paragrafo {
         font-size: 24px;
