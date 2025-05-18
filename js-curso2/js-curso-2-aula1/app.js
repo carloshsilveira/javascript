@@ -1,7 +1,8 @@
 numMaximo = 150;
 
+let listaDeNumerosSorteados = [];
 let numeroSecreto = gerarNumeroAleatorio();
-let tentativas = 1;
+let tentativas = 0;
 exibirMensagemInicial();
 
 function exibirTextoNaTela(tag, texto) {
@@ -15,7 +16,10 @@ function exibirMensagemInicial() {
 }
 
 function verificarChute() {
+    tentativas++;
     let chute = document.querySelector('input').value;
+    exibirTentativas();
+
     if (chute <= numMaximo) {
         if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Você Acertou!');
@@ -24,7 +28,6 @@ function verificarChute() {
 
         } else {
             chute > numeroSecreto ? exibirTextoNaTela('p', 'O número secreto é Menor.') : exibirTextoNaTela('p', 'O número secreto é Maior.');
-            tentativas++;
             limparCampo();
         }
     } else {
@@ -34,7 +37,19 @@ function verificarChute() {
 } 
 
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * numMaximo + 1);
+    let numeroEscolhido = parseInt(Math.random() * numMaximo + 1);
+    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
+    if (quantidadeDeElementosNaLista == numMaximo) {
+        listaDeNumerosSorteados = [];
+        alert('Os números já sorteados foram resetados. O Jogo irá reiniciar.')
+    }
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
+        return gerarNumeroAleatorio();
+    } else {
+        listaDeNumerosSorteados.push(numeroEscolhido);
+        console.log(listaDeNumerosSorteados)
+        return numeroEscolhido;
+    }
 }
 
 function limparCampo() {
@@ -42,9 +57,15 @@ function limparCampo() {
     chute.value = '';
 }
 
+function exibirTentativas() {
+    let textoTentivas = document.getElementById('numeroDeTentativas');
+    textoTentivas.innerHTML = `Tentativas: ${tentativas}`;
+}
+
 function reiniciarJogo () {
-    numeroSecreto = 15;
-    tentativas = 1;
+    numeroSecreto = gerarNumeroAleatorio();
+    tentativas = 0;
+    exibirTentativas();
     exibirMensagemInicial();
     limparCampo();
     document.getElementById('reiniciar').setAttribute('disabled', true);
