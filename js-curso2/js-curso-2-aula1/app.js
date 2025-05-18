@@ -4,6 +4,11 @@ let listaDeNumerosSorteados = [];
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 0;
 exibirMensagemInicial();
+document.querySelector('.container__input').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        verificarChute();
+    }
+});
 
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
@@ -35,6 +40,7 @@ function verificarChute() {
         limparCampo();
     }
 } 
+
 
 function gerarNumeroAleatorio() {
     let numeroEscolhido = parseInt(Math.random() * numMaximo + 1);

@@ -123,6 +123,14 @@ p#numeroDeTentativas {
 
 @media screen and (max-width: 1250px) {
 
+    .container {
+        height: 90%;
+    }
+
+    .container__botoes {
+        gap: 1em;
+    }
+
     h1 {
         font-size: 50px;
         text-align: center;
@@ -165,6 +173,13 @@ p#numeroDeTentativas {
     }
 
     img {
-    width: 5vw;
-}
+        width: 5vw;
+    }
+
+    p#numeroDeTentativas {
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        text-align: center;
+    }  
 }
