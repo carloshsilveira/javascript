@@ -124,10 +124,6 @@ p#numeroDeTentativas {
 
 @media screen and (max-width: 500px) {
 
-    body {
-        background-image: url("img/bg.png");
-    }
-    
     .container {
         height: 80%;
         margin-bottom: 80px;
