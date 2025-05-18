@@ -131,7 +131,7 @@ p#numeroDeTentativas {
 
     .container__input {
         width: 90%;
-
+        height: 10vh;
     }
 
     .container__botao {
@@ -147,7 +147,8 @@ p#numeroDeTentativas {
     }
 
     .texto__paragrafo {
-        font-size: 24px;
+        font-size: 20px;
+        text-align: center;
     }
 
     .container__imagem-pessoa {
