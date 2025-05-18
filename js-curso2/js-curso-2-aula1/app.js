@@ -1,4 +1,4 @@
-numMaximo = 150;
+numMaximo = 3;
 
 let listaDeNumerosSorteados = [];
 let numeroSecreto = gerarNumeroAleatorio();
@@ -30,6 +30,7 @@ function verificarChute() {
         exibirTextoNaTela('h1', 'Você Acertou!');
         exibirTextoNaTela('p', 'Você descobriu o número secreto com ' + tentativas + ' tentativa(s).');
         document.getElementById('reiniciar').removeAttribute('disabled');
+        document.getElementById('iniciar').setAttribute('disabled', true);
 
         } else {
             chute > numeroSecreto ? exibirTextoNaTela('p', 'O número secreto é Menor.') : exibirTextoNaTela('p', 'O número secreto é Maior.');
@@ -75,5 +76,6 @@ function reiniciarJogo () {
     exibirMensagemInicial();
     limparCampo();
     document.getElementById('reiniciar').setAttribute('disabled', true);
+    document.getElementById('iniciar').removeAttribute('disabled');
 }
 
