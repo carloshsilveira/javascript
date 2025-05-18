@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     color: white;
 }
 
@@ -31,12 +31,12 @@ body::before {
     height: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     border-radius: 24px;
     border: 1px solid #1875E8;
     box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
     background-image: url("img/Ruido.png");
-    background-size: 100% 100%;
+    background-size: 10% 10%;
     position: relative;
 }
 
@@ -46,11 +46,12 @@ body::before {
     align-items: center;
     position: absolute;
     bottom: 0;
+    text-align: center;
 }
 
 .container__informacoes {
     flex: 1;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .container__botao {
@@ -112,7 +113,7 @@ button:disabled {
 }
 
 img {
-    width: 30vw;
+    width: 10vw;
 }
 
 p#numeroDeTentativas {
@@ -124,7 +125,8 @@ p#numeroDeTentativas {
 @media screen and (max-width: 1250px) {
 
     .container {
-        height: 90%;
+        height: 80%;
+        margin-bottom: 80px;
     }
 
     .container__botoes {
@@ -178,7 +180,6 @@ p#numeroDeTentativas {
 
     p#numeroDeTentativas {
         padding: 10px;
-        margin-bottom: 20px;
         font-size: 1.5em;
         text-align: center;
     }  
