@@ -142,4 +142,8 @@ img {
     .container__informacoes {
         padding: 1rem
     }
+
+    img {
+    width: 5vw;
+}
 }
