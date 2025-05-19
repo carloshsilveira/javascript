@@ -125,7 +125,7 @@ button:disabled {
     background-color: gray;
 }
 
-img {
+.container__imagem-pessoa {
     width: 30vw;
 }
 
