@@ -126,7 +126,7 @@ button:disabled {
 }
 
 img {
-    width: 10vw;
+    width: 30vw;
 }
 
 p#numeroDeTentativas {
@@ -182,6 +182,7 @@ p#melhorTurma {
 
     .container__imagem-pessoa {
         display: none;
+        width: 5vw;
     }
 
     .container__conteudo {
@@ -192,10 +193,6 @@ p#melhorTurma {
 
     .container__informacoes {
         padding: 1rem
-    }
-
-    img {
-        width: 5vw;
     }
 
     p#numeroDeTentativas {
