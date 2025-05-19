@@ -22,10 +22,10 @@ function exibirMensagemInicial() {
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
-    exibirTentativas();
 
     if (chute <= numMaximo && chute != '') {
         tentativas++;
+        exibirTentativas();
         if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Você Acertou!');
         exibirTextoNaTela('p', 'Você descobriu o número secreto com ' + tentativas + ' tentativa(s).');
