@@ -28,7 +28,7 @@ function stopFireworks() {
 }
 
 // ========== JOGO ==========
-let numMaximo = 3;
+let numMaximo = 150;
 let listaDeNumerosSorteados = [];
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 0;
