@@ -94,6 +94,7 @@ body::before {
     font-size: 24px;
     font-weight: 700;
     font-family: 'Inter', sans-serif;
+    text-align: center;
 }
 
 .container__botoes {
@@ -154,6 +155,7 @@ p#numeroDeTentativas {
     .container__input {
         width: 90%;
         height: 10vh;
+        text-align: center;
     }
 
     .container__botao {
