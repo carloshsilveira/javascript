@@ -135,6 +135,10 @@ p#numeroDeTentativas {
     font-size: 1.5em;
 }
 
+p#melhorTurma {
+    font-size: 1.5em;
+}
+
 @media screen and (max-width: 500px) {
 
     .container {
